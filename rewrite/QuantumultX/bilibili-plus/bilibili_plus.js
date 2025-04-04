@@ -113,6 +113,14 @@ if (magicJS.read(blackKey)) {
               }
               return topList.has(e.id);
             });
+            top.push({
+              id: 3510,
+              icon: "http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png",
+              name: "消息",
+              uri: "bilibili://link/im_home",
+              tab_id: "消息Top",
+              pos: 2
+            });
             obj["data"]["top"] = top;
           }
           if (obj["data"]["bottom"]) {
