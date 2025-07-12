@@ -219,6 +219,15 @@ if (magicJS.read(blackKey)) {
                     magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
                 }
                 break;
+            case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story(\/cart|\?|$)/.test(url):
+                try {
+                    let obj = JSON.parse(res);
+                    obj["data"]["ads"] = null;
+                    body = JSON.stringify(obj);
+                } catch (err) {
+                    magicJS.logError(`广告流出现异常：${err}`);
+                }
+                break;
             default:
                 magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
                 break;
