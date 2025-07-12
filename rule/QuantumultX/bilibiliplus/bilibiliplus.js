@@ -219,7 +219,7 @@ if (magicJS.read(blackKey)) {
                     magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
                 }
                 break;
-            case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story(\/cart|\?|$)/.test(url):
+            case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story(\/cart|\?|$)/.test(magicJS.request.url):
                 try {
                     let obj = JSON.parse(res);
                     obj["data"]["ads"] = null;
