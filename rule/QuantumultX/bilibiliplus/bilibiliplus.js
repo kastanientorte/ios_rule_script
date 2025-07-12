@@ -219,6 +219,7 @@ if (magicJS.read(blackKey)) {
                     magicJS.logError(`去除强制设置的皮肤出现异常：${err}`);
                 }
                 break;
+            // 去除Story模式的广告流
             case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story(\/cart|\?|$)/.test(magicJS.request.url):
                 try {
                     let obj = JSON.parse(res);
