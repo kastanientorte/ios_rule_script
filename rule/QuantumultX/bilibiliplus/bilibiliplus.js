@@ -229,6 +229,16 @@ if (magicJS.read(blackKey)) {
                     magicJS.logError(`广告流出现异常：${err}`);
                 }
                 break;
+            // 屏蔽短视频相关
+            case /^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/relate\/story\?/.test(magicJS.request.url):
+                try {
+                    let obj = JSON.parse(magicJS.response.body);
+                    obj["data"] = null;
+                    body = JSON.stringify(obj);
+                } catch (err) {
+                    console.log(`Story模式处理出现异常：${err}`);
+                }
+                break;
             default:
                 magicJS.logWarning("触发意外的请求处理，请确认脚本或复写配置正常。");
                 break;
