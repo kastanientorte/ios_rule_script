@@ -222,7 +222,7 @@ if (magicJS.read(blackKey)) {
             // 去除Story模式的广告流
             case /^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story(\/cart|\?|$)/.test(magicJS.request.url):
                 try {
-                    let obj = JSON.parse(res);
+                    let obj = JSON.parse(magicJS.response.body);
                     obj["data"]["ads"] = null;
                     body = JSON.stringify(obj);
                 } catch (err) {
