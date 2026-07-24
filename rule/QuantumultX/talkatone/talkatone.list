@@ -75,20 +75,20 @@ DOMAIN-SUFFIX,vm.talkatone.com,PROXY
 DOMAIN-SUFFIX,tenor.com,PROXY
 
 # 以下为该软件可能需要走直连的规则
-DOMAIN-SUFFIX,agkn.com,DIRECT
-DOMAIN-SUFFIX,cohere.com,DIRECT
-DOMAIN-SUFFIX,crashlytics.com,DIRECT
-DOMAIN-SUFFIX,inmobi.com,DIRECT
-DOMAIN-SUFFIX,inner-active.mobi,DIRECT
-DOMAIN-SUFFIX,ip-api.com,DIRECT
-DOMAIN-SUFFIX,kochava.com,DIRECT
-DOMAIN-SUFFIX,mobilefuse.com,DIRECT
-DOMAIN-SUFFIX,talkatone.com,DIRECT
-IP-CIDR,205.164.56.0/24,DIRECT,no-resolve
-IP-CIDR,216.172.154.0/24,DIRECT,no-resolve
-IP-CIDR,50.117.27.0/24,DIRECT,no-resolve
-IP-CIDR,63.251.124.0/24,DIRECT,no-resolve
-IP-CIDR,69.46.75.0/24,DIRECT,no-resolve
+DOMAIN-SUFFIX,agkn.com,PROXY
+DOMAIN-SUFFIX,cohere.com,PROXY
+DOMAIN-SUFFIX,crashlytics.com,PROXY
+DOMAIN-SUFFIX,inmobi.com,PROXY
+DOMAIN-SUFFIX,inner-active.mobi,PROXY
+DOMAIN-SUFFIX,ip-api.com,PROXY
+DOMAIN-SUFFIX,kochava.com,PROXY
+DOMAIN-SUFFIX,mobilefuse.com,PROXY
+DOMAIN-SUFFIX,talkatone.com,PROXY
+IP-CIDR,205.164.56.0/24,PROXY,no-resolve
+IP-CIDR,216.172.154.0/24,PROXY,no-resolve
+IP-CIDR,50.117.27.0/24,PROXY,no-resolve
+IP-CIDR,63.251.124.0/24,PROXY,no-resolve
+IP-CIDR,69.46.75.0/24,PROXY,no-resolve
 
 [URL Rewrite]
 ^https?:\/\/alt-r\.my\.com\/mobile - reject-dict
